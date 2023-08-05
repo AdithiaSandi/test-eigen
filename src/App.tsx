@@ -22,7 +22,7 @@ function App() {
   const [articles, setArticles] = useState<Res[]>([]);
   const [active, setActive] = useState<number>(0);
 
-  const token = import.meta.env.API_KEY;
+  const token = import.meta.env.API_KEY || "4fb7f95370484d929e4f1d7b9f11ceac";
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
