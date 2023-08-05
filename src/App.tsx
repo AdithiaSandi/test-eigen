@@ -22,7 +22,7 @@ function App() {
   const [articles, setArticles] = useState<Res[]>([]);
   const [active, setActive] = useState<number>(0);
 
-  const token = process.env.VITE_NEWS_API_KEY;
+  const token = import.meta.env.VITE_NEWS_API_KEY;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
