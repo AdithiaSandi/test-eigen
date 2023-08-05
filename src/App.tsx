@@ -43,7 +43,7 @@ function App() {
   const handleFetch = () => {
     const options = { method: "GET" };
     fetch(
-      `https://newsapi.org/v2/top-headlines?apiKey=${token}&category=technology&page=2`,
+      `https://newsapi.org/v2/top-headlines?apiKey=${token}&category=technology&page=1`,
       options
     )
       .then((response) => response.json())
