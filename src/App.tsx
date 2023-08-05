@@ -22,6 +22,8 @@ function App() {
   const [articles, setArticles] = useState<Res[]>([]);
   const [active, setActive] = useState<number>(0);
 
+  const token = import.meta.env.VITE_NEWS_API_KEY;
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = (e: React.MouseEvent<HTMLSpanElement>) => {
@@ -41,7 +43,7 @@ function App() {
   const handleFetch = () => {
     const options = { method: "GET" };
     fetch(
-      "https://newsapi.org/v2/top-headlines?apiKey=4fb7f95370484d929e4f1d7b9f11ceac&category=technology&page=2",
+      `https://newsapi.org/v2/top-headlines?apiKey=${token}&category=technology&page=2`,
       options
     )
       .then((response) => response.json())
